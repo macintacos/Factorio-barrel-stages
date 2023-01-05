@@ -1,0 +1,10 @@
+{
+    "name": "barrel-stages",
+    "version": "1.0.0",
+    "title": "Barrel stages",
+    "author": "Tooster",
+    "contact": "Tooster#3471",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.0"],
+    "description": "Fixes inconsistency with all barrels unlocked at once,  without unlocking required fluids (like lubricant barrel recipe without lubricant researched). Good for new players because it reduces overwhelm of new recipes in early game. Fixes this: https://forums.factorio.com/viewtopic.php?f=23&t=100057"
+}
