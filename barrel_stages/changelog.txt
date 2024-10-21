@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2024.10.21 19:13:46+02:00
+  Changes:
+    - Upgraded to Factorio 2.0 and Space Age
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2023.01.05 19:17:30+01:00
+  Changes:
+    - Initial version. All barrel techs are now unlocked after their respective fluid techs.
