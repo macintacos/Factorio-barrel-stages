@@ -31,18 +31,18 @@ jobs:
         zip "barrel_stages_${{ steps.tag_name.outputs.TAG }}.zip" -x '*.xcf' 'barrel_stages/*'
 
     - name: Create GitHub release
-      uses: actions/create-release@1
+      uses: ncipollo/release-action@v1.14.0
       id: create_release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.tag_name.outputs.TAG }}
-        release_name: Release ${{ steps.tag_name.outputs.TAG }}
-        draft: false
-        prerelease: false
+        tag: ${{ steps.tag_name.outputs.TAG }}
+        name: ${{ steps.tag_name.outputs.TAG }}
+        artifact: "barrel_stages_${{ steps.tag_name.outputs.TAG }}.zip"
+        artifactContentType: application/zip
 
     - name: Upload release asset
-      uses: actions/upload-release-asset@v2
+      uses: tanyagray/action-upload-release-asset@v1.1.3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
