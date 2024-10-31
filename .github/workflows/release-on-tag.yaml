@@ -58,7 +58,7 @@ jobs:
       id: aar
       with:
         automatic_release_tag: "${{ steps.mod_version.outputs.prop }}"
-        title: "For factorio ${{ steps.factorio_version.outputs.prop }}"
+        title: "${{ steps.factorio_version.outputs.prop }} for factorio ${{ steps.factorio_version.outputs.prop }}"
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         prerelease: false
         files: |
